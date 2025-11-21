@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# configures nginx to run on port 80
-sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
-kill "$(pgrep nginx)"
+sed -i 's/8080/80/' /etc/nginx/sites-enabled/default
+service nginx restart
+service nginx stop
 nginx
